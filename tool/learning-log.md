@@ -25,7 +25,7 @@ floor.w = 230;
 floor.h = 5;
 floor.physics = STATIC;
 ```
-* I also learned how to creat sprites and change different aspects of them such as there color size and shape. here is an exsapmle of how one looks:
+* I also learned how to create sprites and change different aspects of them such as there color size and shape. Here is an example of how one looks:
 ```js
 await Canvas(250, 100);
 
