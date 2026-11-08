@@ -34,8 +34,41 @@ sprite.width = 50;
 sprite.height = 50;
 ```
 * 
-### X/X/XX:
-* Text
+### 11/7/26:
+* I divided that I want ed to try out phaser because I feel like it might be easer for my project.
+* I found this code on a redit post for phaser and it is just some very basic code that makes a box that you can move around.
+* here is the code:
+```js
+let player, cursors;
+
+const config = {
+  type: Phaser.AUTO,
+  width: 600,
+  height: 400,
+  backgroundColor: '#222222',
+  scene: { create: create, update: update }
+};
+
+new Phaser.Game(config);
+
+// Runs once when the game starts
+function create() {
+  this.add.text(10, 10, 'Use the arrow keys', { color: '#ffffff' });
+  player = this.add.rectangle(300, 200, 50, 50, 0x00ff88);
+  cursors = this.input.keyboard.createCursorKeys();
+}
+
+// Runs every frame (about 60 times per second)
+function update() {
+  if (cursors.left.isDown)  player.x -= 4;
+  if (cursors.right.isDown) player.x += 4;
+  if (cursors.up.isDown)    player.y -= 4;
+  if (cursors.down.isDown)  player.y += 4;
+}
+```
+* What this does is it creates a block then using different aspects of phaser such as ```scene``` and the ```this.input.keyboard.createCursorKeys``` makes it move around. All the if statements at the end diside how fast the block is moving around. The way they chose how fast its moving is though the amount of pixels its able to cover in a given time. Its kind of like Miles per hour but for pixels.
+
+* I also watched this [video](https://www.youtube.com/watch?v=jHTRu4iNTcA) it gave a good introduction to phaser and they are the same people who have this big website that is a really good teaching how to use phaser. 
 
 
 <!-- 
